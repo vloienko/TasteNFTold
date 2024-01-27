@@ -1,0 +1,49 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.margin-top {
+   margin-top: 56px;
+}
+
+
+%h1-title {
+   font-size: 32px;
+   font-weight: 700;
+   line-height: normal;
+}
+
+%username {
+   font-weight: 500;
+   line-height: normal;
+
+   background: var(--gradient-text);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
+%button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--text-white);
+   font-size: 12px;
+   font-weight: 700;
+   line-height: normal;
+   padding: 9px 19px;
+   border-radius: 12px;
+   white-space: nowrap;
+   background: var(--button);
+   box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
+   transition: all .3s ease-in-out;
+
+   @media (any-hover: hover){
+      &:hover{
+         opacity: 0.8;
+      }
+   }
+
+   &:active {
+      
+   }
+}

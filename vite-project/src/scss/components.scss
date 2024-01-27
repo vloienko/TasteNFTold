@@ -1,0 +1,316 @@
+//====================================================================================================
+.user-block {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+
+   &__avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 49px;
+      height: 49px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.15);
+      position: relative;
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+   }
+
+   &__name {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   &__nick {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+
+      background: var(--gradient-text);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+}
+
+//====================================================================================================
+.share {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+
+   &__button {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+
+      @media (any-hover: hover){
+         &:hover img {
+            transition: scale .3s ease-in-out;
+            transform: scale(1.2);
+         }
+      }
+
+      &:active {
+         border-color: #fff;
+      }
+   }
+}
+
+//====================================================================================================
+.card-gallery {
+   margin-top: 24px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 16px;
+
+   @media (max-width:$tablet){
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   @media (max-width:$mobile){
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media (max-width:$mobileSmall){
+      grid-template-columns: 1fr;
+   }
+}
+
+.card {
+   max-width: 317px;
+   width: 100%;
+   border: 1px solid #333940;
+   background-color: #1D2228;
+
+   @media (max-width:$mobile){
+      max-width: 100%;
+   }
+
+   &__content {
+      max-width: 100%;
+      position: relative;
+   }
+
+   &__image {
+      width: 100%;
+      height: 100%;
+   }
+
+   &__block {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      width: 131px;
+      height: 44px;
+      padding: 6px 10px;
+      border-radius: 12px;
+      background: #FFF;
+      color: var(--text-black);
+      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+   
+      &-avatar {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         min-width: 26px;
+         height: 26px;
+         border-radius: 8px;
+         overflow: hidden;
+         box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.15);
+         position: relative;
+   
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+         }
+      }
+   
+      &-box {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 2px;
+      }
+   
+      &-name {
+         font-size: 14px;
+         font-weight: 700;
+         line-height: normal;
+      }
+   
+      &-nick {
+         font-size: 12px;
+         font-weight: 500;
+         line-height: normal;
+   
+         background: var(--gradient-text2);
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+   }  
+
+   &__info {
+      padding: 24px 16px 16px 16px;
+   }
+
+   &__name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   &__holder {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+   &__box {
+      display: grid;
+      grid-template-columns: 1fr 95px;
+      gap: 10px;
+
+      span {
+         display: inline-block;
+      }
+   }
+
+   &__text {
+      color: var(--light-gray);
+      line-height: normal;
+      justify-self: flex-start;
+   }
+
+   &__pricing {
+      justify-self: flex-start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+   }
+
+   &__icon {
+      width: 19px;
+      height: 19px;
+   }
+
+   &__tokens {
+      font-size: 16px;
+      line-height: normal;
+   }
+}
+
+//====================================================================================================
+.creators-slider {
+   margin-top: 24px;
+
+   & .swiper {
+      overflow: visible;
+      padding-bottom: 24px;
+   }
+
+   & .swiper-slide {
+      max-width: 245px;
+      width: 100%;
+   }
+
+
+   & .swiper-scrollbar {
+      left: 0;
+      right: 0;
+      height: 5px;
+      width: 100%;
+   }
+   & .swiper-scrollbar-drag {
+      background: var(--light-gray);
+   }
+}
+
+.creators {
+   max-width: 245px;
+   width: 100%;
+   padding: 24px;
+   background-color: var(--background);
+   border: 1px solid #333940;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+
+   &__image {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+   }
+
+   &__name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   &__user {
+      font-size: 16px;
+      @extend %username;
+   }
+
+   &__text {
+      color: var(--light-gray);
+      line-height: normal;
+   }
+}
