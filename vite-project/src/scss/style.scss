@@ -46,6 +46,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
 $mobile: em(767.98); // Телефони L
+$mobileCustom: em(639.98); // Телефони M
 $mobileSmall: em(479.98); // Телефони S
 
 // Тип адаптива:
