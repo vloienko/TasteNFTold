@@ -2,6 +2,10 @@ import UserImg from './../../img/users/user-tc.jpg';
 import Share from './../../img/icon/share-1.svg';
 
 
+// Styles
+import './bid-placed.scss';
+
+
 const BidPlaced = () => {
    return (
       <div className="bid-placed">

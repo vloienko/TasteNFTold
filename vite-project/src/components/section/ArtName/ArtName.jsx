@@ -7,6 +7,8 @@ import SwiperSlider from './SwiperSlider';
 import soldImg from './../../../img/icon/sold-1.svg';
 
 
+// Styles
+import './art-name.scss';
 
 const ArtName = () => {
    return (

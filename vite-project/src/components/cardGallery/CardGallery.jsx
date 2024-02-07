@@ -1,3 +1,8 @@
+// Styles
+import './card-gallery.scss';
+
+
+
 import Card from '../card/Card';
 
 // Images

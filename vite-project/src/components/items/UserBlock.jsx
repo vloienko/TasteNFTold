@@ -1,6 +1,10 @@
 import userImg from './../../img/users/user-1.jpg';
 
 
+// Style
+import './user-block.scss';
+
+
 const UserBlock = () => {
    return (
       <div className="user-block">

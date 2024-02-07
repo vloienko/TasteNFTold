@@ -1,5 +1,9 @@
 /* eslint-disable react/prop-types */
 
+// Styles
+import './creators.scss';
+
+
 const Creators = (props) => {
    return (
       <div className="creators">

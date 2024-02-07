@@ -1,7 +1,8 @@
 import Search from './Search';
-
 import logoImg from './../../img/logo.svg';
 
+
+import "./header.scss";
 
 
 function Header() {
@@ -9,7 +10,7 @@ function Header() {
       <header className="header">
          <div className="header__container">
             <div className="header__body">
-               <a className="header__logo" href="index.html">
+               <a className="header__logo" href="/../">
                   <img src={logoImg} alt="Logo" />
                </a>
                <div className="header__search">
@@ -26,4 +27,3 @@ function Header() {
 }
 
 export default Header;
-

@@ -1,6 +1,10 @@
 import mainBG from './../../../img/main-bg.jpg';
 
 
+// Styles
+import './bg-image.scss';
+
+
 const BgImage = () => {
    return (
       <div className="bg-image margin-top">

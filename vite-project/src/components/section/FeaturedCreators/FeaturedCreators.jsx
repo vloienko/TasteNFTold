@@ -1,6 +1,10 @@
 import CreatorsSlider from '../../creatorsSlider/CreatorsSlider';
 
 
+// Styles
+import './featured.scss';
+
+
 const FeaturedCreators = () => {
    return (
       <section className="featured">

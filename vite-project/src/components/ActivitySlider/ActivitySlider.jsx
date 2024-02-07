@@ -1,17 +1,26 @@
+// ------ Swiper ------
+
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // import required modules
 import { Scrollbar } from 'swiper/modules';
 
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
+// ------ Swiper ------
+
+
 
 // Import
 import BidPlaced from '../items/BidPlaced';
+
+
+
+// Styles
+
 
 
 const ActivitySlider = () => {

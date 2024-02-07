@@ -1,3 +1,8 @@
+// Styles
+import './creators-slider.scss';
+
+
+
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, A11y } from 'swiper/modules';

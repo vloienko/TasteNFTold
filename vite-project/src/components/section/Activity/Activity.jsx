@@ -4,6 +4,9 @@ import Share from '../../items/Share';
 import ActivitySlider from '../../ActivitySlider/ActivitySlider';
 
 
+// Styles
+import './activity.scss';
+
 
 const Activity = () => {
    return (

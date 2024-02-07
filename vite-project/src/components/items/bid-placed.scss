@@ -1,0 +1,122 @@
+@import '../../scss/style.scss';
+
+
+.bid-placed {
+   max-width: 100%;
+   width: 100%;
+   height: 100%;
+   border: 1px solid #333940;
+   padding: 12px 15px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+
+   @media (max-width:$tablet){
+      flex-direction: column;
+      gap: 5px;
+   }
+
+   &__left,
+   &__right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+   }
+
+   @media (max-width:$tablet){
+      &__left {
+         align-self: flex-start;
+      }
+      &__right {
+         align-self: flex-end;
+      }
+   }
+
+   &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.15);
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__text {
+      max-width: max-content;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__number {
+      font-size: 20px;
+      font-weight: 700;
+      display: inline-block;
+      white-space: nowrap;
+
+      @media (max-width:$pc){
+         font-size: 16px;
+      }
+   }
+
+   &__date {
+      margin-top: 4px;
+      color: var(--light-gray);
+      font-weight: 500;
+   }
+
+   &__price {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      position: relative;
+      padding-left: 25px;
+
+      &::before {
+         position: absolute;
+         content: '';
+         top: 50%;
+         left: 0;
+         width: 19px;
+         height: 19px;
+         background: url('../../img/icon/sold-1.svg') center/cover no-repeat;
+         transform: translateY(-50%);
+      }
+
+      span {
+         margin-left: 4px;
+         color: var(--light-gray);
+      }
+   }
+
+   &__link {
+      border-radius: 12px;
+      background: var(--button);
+      box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 32px;
+      height: 32px;
+
+      @media (any-hover: hover){
+         &:hover img {
+            transition: scale .3s ease-in-out;
+            transform: scale(1.2);
+         }
+      }
+   }
+}

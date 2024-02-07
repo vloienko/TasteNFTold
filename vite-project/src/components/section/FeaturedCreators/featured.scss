@@ -1,0 +1,11 @@
+@import '../../../scss/style.scss';
+
+
+.featured {
+   @include adaptiveValue("padding-top", 40, 20);
+   @include adaptiveValue("padding-bottom", 66, 33);
+
+   &__title {
+      @extend %h1-title;
+   }
+}

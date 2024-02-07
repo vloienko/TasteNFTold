@@ -1,0 +1,104 @@
+@import '../../../scss/style.scss';
+
+
+.activity {
+   padding-top: 16px;
+   @include adaptiveValue("padding-bottom", 50, 20);
+
+   &__container {
+      max-width: toRem(1374) !important;
+      width: 100%;
+   }
+
+   &__body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+
+      @media (max-width:$mobile){
+         flex-direction: column;
+      }
+   }
+
+   &__info {
+      margin-left: 13px;
+      max-width: 518px;
+      width: 100%;
+      font-weight: 500;
+      
+      span {
+         color: var(--light-gray);
+      }
+
+      @media (max-width:$pc){
+         margin-left: 0;
+      }
+
+      @media (max-width:$mobile){
+         max-width: 100%; 
+      }
+   }
+
+   &__title {
+      margin-top: 16px;
+      @extend %h1-title;
+   }
+
+   &__copy {
+      margin-top: 14px;
+   }
+
+   &__text {
+      margin: 12px 0px 16px 0px;
+      display: inline-block;
+      line-height: 127%;
+   }
+
+   &__naming {
+      font-size: 18px;
+      font-weight: 700;
+   }
+
+   &__content {
+      padding-top: 5px;
+      max-width: 791px;
+      width: 100%;
+
+      & .swiper {
+         padding-right: 13px;
+         margin-top: 16px;
+         max-height: 442px;
+         height: 100%;
+         position: relative;
+
+         @media (max-width:$tablet){
+            max-height: 432px;
+         }
+      }
+
+      & .swiper-slide {
+         max-width: 100%;
+         width: 100%;
+         height: 67px;
+
+         @media (max-width:$tablet){
+            height: 100%;
+         }
+      }
+
+      & .swiper-scrollbar {
+         left: auto;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         width: 5px;
+         height: 100%;
+         background: transparent;
+      }
+      & .swiper-scrollbar-drag {
+         background: var(--light-gray);
+      }
+   }
+}

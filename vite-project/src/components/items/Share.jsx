@@ -3,6 +3,10 @@ import shareImg_2 from './../../img/icon/share-2.svg';
 import shareImg_3 from './../../img/icon/share-3.svg';
 
 
+// Styles
+import './share.scss';
+
+
 const Share = () => {
    return (
       <div className="share">

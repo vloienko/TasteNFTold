@@ -1,0 +1,11 @@
+@import '../../../scss/style.scss';
+
+
+.feature-works {
+   @include adaptiveValue("padding-top", 50, 20);
+   @include adaptiveValue("padding-bottom", 75, 40);
+
+   &__title {
+     @extend %sub-title;
+   }
+}

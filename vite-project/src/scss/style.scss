@@ -149,12 +149,3 @@ body {
 
 // Підключення стилів загальних елементів проекту
 @import "common";
-
-// Підключення стилів окремих блоків
-@import "header";
-@import "footer";
-@import "components";
-
-// Підключення стилів окремих сторінок
-@import "home";
-@import "artwork-page";

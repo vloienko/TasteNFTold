@@ -2,6 +2,9 @@
 import CardGallery from '../../cardGallery/CardGallery';
 
 
+// Styles
+import './feature-works.scss';
+
 const FeatureWorks = () => {
    return (
       <section className="feature-works">

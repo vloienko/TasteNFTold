@@ -1,5 +1,10 @@
 import CardGallery from '../../cardGallery/CardGallery';
 
+
+// Styles
+import './filters-block.scss';
+
+
 const FiltersBlock = () => {
    return (
       <div className="filters-block">

@@ -1,5 +1,9 @@
 /* eslint-disable react/prop-types */
 
+// Styles
+import './card.scss';
+
+
 const Card = (props) => {
 
    return (
