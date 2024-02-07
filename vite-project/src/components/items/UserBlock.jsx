@@ -1,4 +1,4 @@
-import userImg from './../../img/users/user-1.png';
+import userImg from './../../img/users/user-1.jpg';
 
 
 const UserBlock = () => {

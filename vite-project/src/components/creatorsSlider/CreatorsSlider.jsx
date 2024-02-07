@@ -12,14 +12,11 @@ import 'swiper/css/scrollbar';
 import Creators from './Creators';
 
 // Users
-import userImg_1 from '../../img/users/user-1.png';
-import userImg_2 from '../../img/users/user-2.png';
-import userImg_3 from '../../img/users/user-3.png';
-import userImg_4 from '../../img/users/user-4.png';
-import userImg_5 from '../../img/users/user-5.png';
-import userImg_6 from '../../img/users/user-6.png';
-import userImg_7 from '../../img/users/user-7.png';
-import userImg_8 from '../../img/users/user-8.png';
+import userImg_1 from '../../img/users/user-1.jpg';
+import userImg_2 from '../../img/users/user-2.jpg';
+import userImg_3 from '../../img/users/user-3.jpg';
+import userImg_4 from '../../img/users/user-4.jpg';
+import userImg_5 from '../../img/users/user-5.jpg';
 
 
 const name = 'User Name';
@@ -53,13 +50,13 @@ const CreatorsSlider = () => {
                <Creators img={userImg_5} name={name} user={user} text={text}></Creators>
             </SwiperSlide>
             <SwiperSlide>
-               <Creators img={userImg_6} name={name} user={user} text={text}></Creators>
+               <Creators img={userImg_1} name={name} user={user} text={text}></Creators>
             </SwiperSlide>
             <SwiperSlide>
-               <Creators img={userImg_7} name={name} user={user} text={text}></Creators>
+               <Creators img={userImg_2} name={name} user={user} text={text}></Creators>
             </SwiperSlide>
             <SwiperSlide>
-               <Creators img={userImg_8} name={name} user={user} text={text}></Creators>
+               <Creators img={userImg_3} name={name} user={user} text={text}></Creators>
             </SwiperSlide>
          </Swiper>
       </div>

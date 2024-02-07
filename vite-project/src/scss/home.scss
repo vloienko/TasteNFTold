@@ -8,12 +8,20 @@
       align-items: flex-end;
       justify-content: center;
       gap: 16px;
+
+      @media (max-width:$mobile){
+         flex-direction: column;
+      }
    }
 
    &__info {
       max-width: 516px;
       width: 100%;
       margin-bottom: 29px;
+
+      @media (max-width:$mobile){
+         max-width: 100%; 
+      }
    }
 
    &__block {
@@ -41,6 +49,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 15px;
+
+      @media (max-width:$mobileSmall){
+         flex-direction: column;
+         align-items: flex-start;
+      }
    }
 
    &__sold {
@@ -88,12 +101,40 @@
    &__slider {
       max-width: 786px;
       width: 100%;
-      padding-bottom: 29px;
       overflow: hidden;
    }
 
-   &__wrapper {
+   & .swiper {
+      padding-bottom: 29px;
+
+      .swiper-slide {
+         max-width: 519px;
+         width: 100%;
+      }
+      .swiper-slide-active {
+         transform: translate(0) !important;
+      }
+      .swiper-pagination {
+         bottom: 0 !important;
+         text-align: left !important;
+         display: flex;
+         align-items: center;
+         gap: 11px;
+      }
+      .swiper-pagination-bullet {
+         width: 95px;
+         height: 5px;
+         margin: 0 !important;
+         border-radius: 99px;
+         background: rgba(255, 255, 255, 0.15);
+      }
+      .swiper-pagination-bullet-active {
+         background: rgba(255, 255, 255, 0.50);
+      }
    }
+
+  
+   
 
    &__image {
    
@@ -104,41 +145,6 @@
    }
 }
 
-.slide-image {
-   
-}
-
-.margin-top {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-   max-width: 519px;
-   width: 100%;
-}
-.swiper-slide-active {
-   transform: translate(0) !important;
-}
-
-.swiper-pagination {
-   bottom: -24px !important;
-   text-align: left !important;
-   display: flex;
-   align-items: center;
-   gap: 11px;
-}
-.swiper-pagination-bullet {
-   width: 95px;
-   height: 5px;
-   margin: 0 !important;
-   border-radius: 99px;
-   background: rgba(255, 255, 255, 0.15);
-}
-.swiper-pagination-bullet-active {
-   background: rgba(255, 255, 255, 0.50);
-}
 
 
 
