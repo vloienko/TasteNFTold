@@ -1,29 +1,23 @@
-import Search from './Search';
-import logoImg from './../../img/logo.svg';
+/* eslint-disable no-unused-vars */
+
+// // React
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 
-import "./header.scss";
+// Import
+import HeaderAutorized from './HeaderAutorized';
+import HeaderMain from './HeaderMain';
 
 
 function Header() {
-   return (
-      <header className="header">
-         <div className="header__container">
-            <div className="header__body">
-               <a className="header__logo" href="/../">
-                  <img src={logoImg} alt="Logo" />
-               </a>
-               <div className="header__search">
-                  <Search />
-               </div>
-               <div className="header__box">
-                  <button className="header__button" type="button">Connect wallet</button>
-                  <button className="header__button mobile" type="button">Wallet</button>
-               </div>
-            </div>
-         </div>
-      </header>
-   )
+   const location = useLocation();
+
+   if (location.pathname === '/my-profile') {
+      return <HeaderAutorized />;
+   } else {
+      return <HeaderMain />;
+   }
 }
 
 export default Header;

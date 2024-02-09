@@ -1,14 +1,12 @@
-// import ArtName from '../components/section/ArtName/ArtName';
-// import FiltersBlock from '../components/section/FiltersBlock/FiltersBlock';
-// import FeaturedCreators from '../components/section/FeaturedCreators/FeaturedCreators';
+import Creator from '../components/section/Creator/Creator';
+import TabsCards from '../components/section/TabsCards/TabsCards';
 
 
 const CreatorProfile = () => {
    return (
       <>
-         {/* < />
-         < />
-         < /> */}
+         <Creator />
+         <TabsCards />
       </>
    );
 }

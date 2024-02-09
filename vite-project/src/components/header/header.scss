@@ -23,7 +23,6 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
-		gap: 16px;
 
 		@media (max-width:$mobileSmall){
 			gap: 8px;
@@ -31,7 +30,6 @@
 	}
 
 	&__logo {
-		@include adaptiveValue("margin-right", 9, 0);
 		display: inline-block;
 		display: flex;
 		align-items: center;
@@ -45,6 +43,7 @@
 
 	&__search {
 		width: 100%;
+		margin-left: 25px;
 
 		form {
 			border-radius: 12px;
@@ -83,6 +82,7 @@
 
 	&__button {
 		@extend %button;
+		margin-left: 16px;
 
 		@media (max-width:$mobileSmall){
 			display: none; 

@@ -1,0 +1,25 @@
+@import '../../scss/style.scss';
+
+
+.followers {
+   display: flex;
+   align-items: center;
+   
+   &__box {
+      &:not(:first-child) {
+         margin-left: 16px;
+      }
+   }
+
+   &__quantity {
+      line-height: 18px; 
+   }
+
+   &__text {
+      margin-top: 2px;
+      display: inline-block;
+      color: var(--light-gray);
+      font-weight: 400;
+      line-height: 18px;
+   }
+}
