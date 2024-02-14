@@ -24,7 +24,7 @@ function HeaderAutorized() {
                </div>
                <div className="header__box">
                   <button className="header__button" type="button">+ Add artwork</button>
-                  {/* <button className="header__button mobile" type="button">Wallet</button> */}
+                  <button className="header__button mobile" type="button">+ Add</button>
                </div>
                <UserMenu />
             </div>

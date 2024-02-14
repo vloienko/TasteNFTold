@@ -3,7 +3,7 @@ import './user-menu.scss';
 
 
 // Import
-
+import React, { useState } from 'react';
 
 // Image
 import userImg from './../../img/users/user-1.jpg';
@@ -11,8 +11,15 @@ import userImg from './../../img/users/user-1.jpg';
 
 
 const UserMenu = () => {
+   const [open, setOpen] = useState(false);
+   const Menus = ['My profile', 'Balance settings', 'Log out'];
+
+   // Додавання або видалення класу в залежності від стану open
+   const menuClass = open ? "user-menu user-menu--open" : "user-menu";
+
    return (
-      <div className="user-menu">
+
+      <div className={menuClass} onClick={() => setOpen(!open)}>
          <div className="user-menu__main">
             <div className="user-menu__avatar">
                <img src={userImg} alt="User photo" />
@@ -29,23 +36,33 @@ const UserMenu = () => {
             </div>
          </div>
 
-         <div className="user-menu__burger">
-            <div className="user-menu__score">
-               <span className="user-menu__text-address">Address:</span>
-               <div className="user-menu__bill">0c0xcx1cx606g4516x51g1...</div>
+         {open && (
+            <div className="user-menu__burger">
+               <div className="user-menu__score">
+                  <span className="user-menu__text-address">Address:</span>
+                  <div className="user-menu__bill">0c0xcx1cx606g4516x51g1...</div>
+               </div>
+               <ul className="user-menu__list">
+                  {Menus.map((menu) => (
+                     <li
+                        key={menu}
+                        onClick={(e) => {
+                           e.stopPropagation(); // Запобігання спрацьовуванню onClick батьківського елементу
+                           setOpen(false);
+                        }}
+                        className="user-menu__item"
+                     >
+                        <button className="user-menu__button" type="button">
+                           {menu}
+                        </button>
+                     </li>
+                  ))}
+               </ul>
+
+
+
             </div>
-            <ul className="user-menu__list">
-               <li className="user-menu__item">
-                  <button className="user-menu__button" type="button">My profile</button>
-               </li>
-               <li className="user-menu__item">
-                  <button className="user-menu__button" type="button">Balance settings</button>
-               </li>
-               <li className="user-menu__item">
-                  <button className="user-menu__button log-out" type="button">Log out</button>
-               </li>
-            </ul>
-         </div>
+         )}
       </div>
    );
 }
