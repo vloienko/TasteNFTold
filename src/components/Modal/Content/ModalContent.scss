@@ -1,0 +1,157 @@
+@import '../../../scss/style.scss';
+
+
+%modal-title {
+   color: var(--text-white);
+   text-align: center;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+%modal-input-title {
+   color: var(--light-gray);
+   font-size: 16px;
+   font-weight: 600;
+}
+
+%modal-descr {
+   color: var(--light-gray);
+   font-size: 12px;
+   font-weight: 500;
+}
+
+%modal-button {
+   @extend %button;
+   font-size: 14px;
+   font-weight: 700;
+   padding: 12px 32px;
+   max-width: max-content;
+   align-self: center;
+}
+
+
+.edit-profile {
+   @extend %flex-column;
+
+   &__title {
+      @extend %modal-title;
+   }
+
+   &__form {
+      margin-top: 32px;
+      @extend %flex-column;
+   }
+
+   &__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 24px;
+
+      align-items: center;
+   }
+
+   &__field {
+      @extend %flex-column;
+      justify-content: flex-end;
+      height: 100%;
+
+      p {
+         @extend %modal-descr;
+      }
+
+      label, span {
+        @extend %modal-input-title;
+      }
+
+      input, textarea {
+         margin-top: 8px;
+         border-radius: 8px;
+         background: var(--background);
+         padding: 10px 12px;
+         color: var(--text-white);
+         width: 100%;
+      }
+
+      input {
+         height: 40px;
+      }
+
+      textarea {
+         resize: none;
+      }
+
+      & .height-big {
+         height: 120px !important;
+      }
+
+      &:nth-child(5), &:last-child {
+         grid-column: 2 span;
+      }
+
+      &.image {
+         border-radius: 16px;
+         box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
+         padding: 20px;
+
+         input {
+
+         }
+
+      }
+   }
+
+   &__wrap {
+      padding-left: 29px;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         content: '@';
+         top: calc(5px + 50%);
+         left: 5px;
+         width: 14px;
+         height: 19px;
+         transform: translateY(-50%);
+
+         font-size: 16px;
+         font-weight: 600;
+         color: var(--light-gray);
+      }
+   }
+
+   &__contacts {
+      display: grid;
+      grid-template-columns: 91px 1fr;
+      gap: 10px;
+
+      &:not(:first-child) {
+         margin-top: 2px;
+      }
+
+      label {
+         margin-top: 8px;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         gap: 6px;
+
+         img {
+            width: 20px;
+            height: 20px;
+         }
+
+         span {
+            color: var(--text-white);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+         }
+      }
+   }
+
+   &__save {
+      margin-top: 24px;
+      @extend %modal-button;
+   }
+}
